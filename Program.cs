@@ -8,8 +8,6 @@
 
             int[] codepoints = [0x000000A3, 0x0000007E, 0x0000039B, 0x00000E3F, 0x00000031, 0x0000263A];
 
-            PrintUTF8Bytes(GetUTF8Bytes(0x000000A3));
-
             foreach (int codepoint in codepoints)
             {
                 Console.WriteLine($"Codepoint \"{PrintUTF8Bytes(GetUNICODECodepoint(codepoint))}\" representing char \'{PrintUNICODEChar(codepoint)}\' encoded in UTF-8: \"{PrintUTF8Bytes(GetUTF8Bytes(codepoint))}\"");

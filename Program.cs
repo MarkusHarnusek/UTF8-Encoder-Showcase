@@ -24,8 +24,7 @@
 
         static byte[] GetUNICODECodepoint(int codepoint)
         {
-            string utf32Char = char.ConvertFromUtf32(codepoint);
-            return System.Text.Encoding.GetEncoding("utf-32BE").GetBytes(utf32Char);
+            return System.Text.Encoding.GetEncoding("utf-32BE").GetBytes(char.ConvertFromUtf32(codepoint));
         }
 
         static string PrintUTF8Bytes(byte[] inputBytes)

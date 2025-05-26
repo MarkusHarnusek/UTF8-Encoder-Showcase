@@ -18,8 +18,7 @@
 
         static byte[] GetUTF8Bytes(int codePoint)
         {
-            string unicodeChar = char.ConvertFromUtf32(codePoint);
-            return System.Text.Encoding.UTF8.GetBytes(unicodeChar);
+            return System.Text.Encoding.UTF8.GetBytes(char.ConvertFromUtf32(codePoint));
         }
 
         static byte[] GetUNICODECodepoint(int codepoint)
